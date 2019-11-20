@@ -4,7 +4,7 @@ import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
 
 import styles from './styles';
 
-const About = ({data}) => (
+const About = ({allConducts}) => (
   <ScrollView style={styles.container}>
     <View style={styles.headerView}>
       <Image
@@ -17,10 +17,16 @@ const About = ({data}) => (
     </Text>
     <Text style={styles.openingTitle}>Date & Venue</Text>
     <Text style={styles.bodyText}>
-      The R10 conference will take place on the North Pole, Mrs. Claus will be
-      hosting.
+      The R10 conference will take place on Tuesday, June 30, 2020 in Vancouver,
+      BC.
     </Text>
     <Text style={styles.openingTitle}>Code Of Conduct</Text>
+    {allConducts.map(conduct => (
+      <View conduct={conduct} key={conduct.id}>
+        <Text style={styles.title}>{conduct.title}</Text>
+        <Text style={styles.text}>{conduct.description}</Text>
+      </View>
+    ))}
   </ScrollView>
 );
 

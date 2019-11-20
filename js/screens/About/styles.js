@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {typography} from '../../config/styles';
 const styles = StyleSheet.create({
   headerView: {
     height: 100,
@@ -23,6 +24,18 @@ const styles = StyleSheet.create({
   descriptionTitle: {
     color: '#C8A2C8',
     marginBottom: 20,
+  },
+  title: {
+    color: '#9963ea',
+    marginLeft: 10,
+    fontFamily: typography.fontMain,
+    fontSize: 16,
+  },
+  text: {
+    marginBottom: 15,
+    fontSize: 16,
+    fontFamily: typography.fontMainLight,
+    lineHeight: 22,
   },
 });
 
