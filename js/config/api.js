@@ -1,4 +1,4 @@
 import ApolloClient from 'apollo-boost';
 export default new ApolloClient({
-  uri: 'https://r10.academy/graphql',
+  uri: 'https://r10.academy.red/graphql',
 });
