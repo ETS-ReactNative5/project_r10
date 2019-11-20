@@ -1,10 +1,13 @@
 import React from 'react';
 import {Text, Button, View} from 'react-native';
+import {formatSessionData} from '../../lib/helper';
+import SessionsList from '../../components/SessionList';
 
-const Schedule = ({navigation}) => {
+const Schedule = ({navigation, allSessions}) => {
+  const sortedSessions = formatSessionData(allSessions);
   return (
     <View>
-      <Text>Hello Schedule</Text>
+      <SessionsList sessions={sortedSessions} />
       <Button
         title="Go to Session"
         onPress={() => navigation.push('Session')}
