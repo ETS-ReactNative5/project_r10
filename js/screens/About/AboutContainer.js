@@ -1,12 +1,25 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
 
-export default class AboutContainer extends Component {
+import About from './About';
+
+class AboutContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  //   componentDidMount() {
+  // fetch('');
+  //   .then(res => res.json())
+  //   .then(data => this.setState({data}))
+  //   .catch(err => console.log(err));
+  //   }
+
   render() {
-    return (
-      <View>
-        <Text> textInComponent </Text>
-      </View>
-    );
+    // console.log(this.state.data);
+
+    return <About />;
   }
 }
+
+export default AboutContainer;
