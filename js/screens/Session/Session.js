@@ -19,21 +19,23 @@ import {
   Button,
 } from 'react-native';
 import styles from './styles';
-import {withNavigation} from 'react-navigation';
+import {withNavigation, Platform} from 'react-navigation';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
-// import moment from 'moment';
+import Icon from 'react-native-vector-icons/Ionicons';
+import moment from 'moment';
 import LinearGradient from 'react-native-linear-gradient';
-import PropTypes from 'prop-types';
 
 const Session = ({session, navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.faveContainer}>
         <Text style={styles.location}>{session.location}</Text>
-        {faveIds.includes(session.id) ? (
-          <Icon name="heart" size={15} color="#cf392a" />
-        ) : null}
+
+        <Icon
+          name={Platform.OS === 'ios' ? 'ios-heart' : 'md-heart'}
+          size={16}
+          color="red"
+        />
       </View>
       <Text style={styles.title}>{session.title}</Text>
       <Text style={styles.time}>{session.time}</Text>
@@ -82,14 +84,6 @@ const Session = ({session, navigation}) => {
       </View>
     </View>
   );
-};
-Session.protoTypes = {
-  session: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-  }),
-  navigation: PropTypes.object.isRequired,
 };
 
 export default withNavigation(Session);

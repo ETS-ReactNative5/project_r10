@@ -7,7 +7,7 @@ const SessionsList = ({sessions}) => (
   <SectionList
     renderItem={({item}) => (
       <View>
-        <Text>{item.title}</Text>
+        <Text style={styles.title}>{item.title}</Text>
         <Text>{item.location}</Text>
       </View>
     )}
