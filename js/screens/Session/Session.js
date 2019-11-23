@@ -1,25 +1,9 @@
-// import React from 'react';
-// import {Text} from 'react-native';
-
-// const Session = () => {
-//   return <Text>Hello Session</Text>;
-// };
-
-// export default Session;
-
 //stateless markup only
 
 import React from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  Button,
-} from 'react-native';
+import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
 import styles from './styles';
-import {withNavigation, Platform} from 'react-navigation';
+import {withNavigation} from 'react-navigation';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import moment from 'moment';
@@ -31,20 +15,18 @@ const Session = ({session, navigation}) => {
       <View style={styles.faveContainer}>
         <Text style={styles.location}>{session.location}</Text>
 
-        <Icon
-          name={Platform.OS === 'ios' ? 'ios-heart' : 'md-heart'}
-          size={16}
-          color="red"
-        />
+        <Icon name="ios-heart" size={15} color="#cf392a" />
       </View>
       <Text style={styles.title}>{session.title}</Text>
-      <Text style={styles.time}>{session.time}</Text>
+      <Text style={styles.time}>{moment(session.time).format('LT')}</Text>
       <Text style={styles.text}>{session.description}</Text>
       <Text style={styles.presentedBy}>Presented by: </Text>
       {session.speaker ? (
         <TouchableOpacity
           onPress={() => {
-            console.log('pressed');
+            navigation.navigate('Speaker', {
+              speaker: session.speaker,
+            });
           }}
           activeOpacity={0.5}
           style={styles.speakerContainer}>
@@ -54,33 +36,31 @@ const Session = ({session, navigation}) => {
       ) : null}
       <View style={styles.devider} />
       <View style={styles.addFaveContainer}>
-        {faveIds.includes(session.id) ? (
-          <TouchableOpacity
-            onPress={console.log('pressed')}
-            style={styles.buttonContainer}
-            activeOpacity={0.5}>
-            <LinearGradient
-              colors={['#9963ea', '#8797D6']}
-              start={{x: 0.0, y: 1.0}}
-              end={{x: 1.0, y: 0.0}}
-              style={[StyleSheet.absoluteFill, styles.button]}
-            />
-            <Text style={styles.buttonText}>Remove From Faves</Text>
-          </TouchableOpacity>
-        ) : (
-          <TouchableOpacity
-            onPress={console.log('pressed')}
-            style={styles.buttonContainer}
-            activeOpacity={0.5}>
-            <LinearGradient
-              colors={['#9963ea', '#8797D6']}
-              start={{x: 0.0, y: 1.0}}
-              end={{x: 1.0, y: 0.0}}
-              style={[StyleSheet.absoluteFill, styles.button]}
-            />
-            <Text style={styles.buttonText}>Add To Faves</Text>
-          </TouchableOpacity>
-        )}
+        <TouchableOpacity
+          onPress={() => console.log('pressed')}
+          style={styles.buttonContainer}
+          activeOpacity={0.5}>
+          <LinearGradient
+            colors={['#9963ea', '#8797D6']}
+            start={{x: 0.0, y: 1.0}}
+            end={{x: 1.0, y: 0.0}}
+            style={[StyleSheet.absoluteFill, styles.button]}
+          />
+          <Text style={styles.buttonText}>Remove From Faves</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => console.log('pressed')}
+          style={styles.buttonContainer}
+          activeOpacity={0.5}>
+          <LinearGradient
+            colors={['#9963ea', '#8797D6']}
+            start={{x: 0.0, y: 1.0}}
+            end={{x: 1.0, y: 0.0}}
+            style={[StyleSheet.absoluteFill, styles.button]}
+          />
+          <Text style={styles.buttonText}>Add To Faves</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

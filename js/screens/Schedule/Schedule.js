@@ -8,10 +8,6 @@ const Schedule = ({navigation, allSessions}) => {
   return (
     <View>
       <SessionsList sessions={sortedSessions} />
-      <Button
-        title="Go to Session"
-        onPress={() => navigation.push('Session')}
-      />
     </View>
   );
 };

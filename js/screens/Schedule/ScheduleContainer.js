@@ -21,7 +21,7 @@ class ScheduleContainer extends Component {
         {({loading, error, data}) => {
           if (loading) return <Loader />;
           if (error) return <Text>{error.message}</Text>;
-          console.log(data.allSessions);
+          // console.log(data.allSessions);
           return (
             <Schedule
               navigation={this.props.navigation}

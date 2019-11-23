@@ -6,7 +6,6 @@ import {Query} from 'react-apollo';
 import {typography} from '../../config/styles';
 import Session from './Session';
 import Loader from '../../components/Loader';
-import PropTypes from 'prop-types';
 
 const GET_SESSION = gql`
   query session($id: ID!) {
@@ -54,7 +53,5 @@ class SessionContainer extends Component {
     );
   }
 }
-SessionContainer.protoTypes = {
-  navigation: PropTypes.object.isRequired,
-};
+
 export default SessionContainer;

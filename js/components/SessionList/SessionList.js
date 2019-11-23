@@ -2,14 +2,16 @@ import React from 'react';
 import {View, Text, SectionList} from 'react-native';
 import styles from './styles';
 import moment from 'moment';
+import SingleSession from '../SingleSession';
 
 const SessionsList = ({sessions}) => (
   <SectionList
     renderItem={({item}) => (
-      <View>
-        <Text style={styles.title}>{item.title}</Text>
-        <Text>{item.location}</Text>
-      </View>
+      <SingleSession item={item} />
+      //   <View>
+      //     <Text style={styles.title}>{item.title}</Text>
+      //     <Text>{item.location}</Text>
+      //   </View>
     )}
     renderSectionHeader={({section: {title}}) => (
       <View>
