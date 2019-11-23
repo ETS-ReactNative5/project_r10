@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
 import Speaker from './Speaker';
-
-export default class SpeakerContainer extends Component {
+class SpeakerContainer extends Component {
   render() {
-    return <Speaker />;
+    const {navigation} = this.props;
+    const speaker = navigation.getParam('speaker');
+    return <Speaker speaker={speaker} />;
   }
 }
+export default SpeakerContainer;
