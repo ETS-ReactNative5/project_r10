@@ -31,6 +31,7 @@ class AboutContainer extends Component {
           if (loading) return <Loader />;
           if (error) return <Text>{error.message}</Text>;
           // console.log(data.allConducts);
+
           return <About allConducts={data.allConducts} />;
         }}
       </Query>

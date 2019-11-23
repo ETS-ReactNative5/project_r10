@@ -1,22 +1,27 @@
 import {StyleSheet} from 'react-native';
-import {typography} from '../../config/styles';
+
 const styles = StyleSheet.create({
+  container: {
+    padding: 15,
+  },
   headerView: {
-    height: 100,
-    borderBottomWidth: 0.5,
-    marginHorizontal: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: '#e6e6e6',
+    padding: 20,
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom: 20,
   },
   openingTitle: {
-    fontSize: 20,
+    fontSize: 22,
     marginBottom: 20,
+    marginTop: 20,
     fontWeight: 'bold',
     fontFamily: 'Montserrat-Regular',
   },
   bodyText: {
-    fontSize: 14,
-    // lineHeight: 3,
+    fontSize: 16,
+
     fontFamily: 'Montserrat-Light',
     marginBottom: 20,
     marginVertical: 20,
@@ -24,18 +29,6 @@ const styles = StyleSheet.create({
   descriptionTitle: {
     color: '#C8A2C8',
     marginBottom: 20,
-  },
-  title: {
-    color: '#9963ea',
-    marginLeft: 10,
-    fontFamily: typography.fontMain,
-    fontSize: 16,
-  },
-  text: {
-    marginBottom: 15,
-    fontSize: 16,
-    fontFamily: typography.fontMainLight,
-    lineHeight: 22,
   },
 });
 

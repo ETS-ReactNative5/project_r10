@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+
 import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
 
 import styles from './styles';
+import CodeOfConducts from '../../components/CodeOfConducts';
 
 const About = ({allConducts}) => (
   <ScrollView style={styles.container}>
@@ -21,11 +22,9 @@ const About = ({allConducts}) => (
       BC.
     </Text>
     <Text style={styles.openingTitle}>Code Of Conduct</Text>
+
     {allConducts.map(conduct => (
-      <View conduct={conduct} key={conduct.id}>
-        <Text style={styles.title}>{conduct.title}</Text>
-        <Text style={styles.text}>{conduct.description}</Text>
-      </View>
+      <CodeOfConducts key={conduct.id} conduct={conduct} />
     ))}
   </ScrollView>
 );
