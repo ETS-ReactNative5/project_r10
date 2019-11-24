@@ -26,6 +26,8 @@ const About = ({allConducts}) => (
     {allConducts.map(conduct => (
       <CodeOfConducts key={conduct.id} conduct={conduct} />
     ))}
+
+    <Text style={styles.copyRight}>&copy; RED Academy 2019</Text>
   </ScrollView>
 );
 

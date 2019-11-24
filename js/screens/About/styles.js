@@ -30,6 +30,13 @@ const styles = StyleSheet.create({
     color: '#C8A2C8',
     marginBottom: 20,
   },
+  copyRight: {
+    fontFamily: 'Montserrat',
+    fontSize: 18,
+    paddingTop: 15,
+    paddingBottom: 40,
+    fontWeight: '200',
+  },
 });
 
 export default styles;
