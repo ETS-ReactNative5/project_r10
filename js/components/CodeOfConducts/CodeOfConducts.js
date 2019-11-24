@@ -27,6 +27,7 @@ export default class CodeOfConducts extends Component {
     }).start(animation => {
       this.setState({
         translateValue: new Animated.Value(0),
+        sign: !this.state.sign,
       });
     });
   };
@@ -52,7 +53,7 @@ export default class CodeOfConducts extends Component {
                 {transform: [{rotate: spin}], height: 20, width: 10},
                 styles.animatedSign,
               ]}>
-              {this.state.expanded ? '-' : '+'}
+              {this.state.sign ? '+' : '-'}
             </Animated.Text>
             <Text style={styles.title}>{this.props.conduct.title}</Text>
           </View>

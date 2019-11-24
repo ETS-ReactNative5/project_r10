@@ -6,13 +6,7 @@ import SingleSession from '../SingleSession';
 
 const SessionsList = ({sessions}) => (
   <SectionList
-    renderItem={({item}) => (
-      <SingleSession item={item} />
-      //   <View>
-      //     <Text style={styles.title}>{item.title}</Text>
-      //     <Text>{item.location}</Text>
-      //   </View>
-    )}
+    renderItem={({item}) => <SingleSession item={item} />}
     renderSectionHeader={({section: {title}}) => (
       <View>
         <Text style={styles.header}>{moment(title).format('LT')}</Text>
