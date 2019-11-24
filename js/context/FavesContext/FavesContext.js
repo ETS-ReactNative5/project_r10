@@ -56,4 +56,5 @@ class FavesProvider extends Component {
     );
   }
 }
+
 export default FavesProvider;
