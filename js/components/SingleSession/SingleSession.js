@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, TouchableOpacity} from 'react-native';
+import {Text, View, TouchableOpacity, Platform} from 'react-native';
 import {withNavigation} from 'react-navigation';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {FavesContext} from '../../context/FavesContext';
@@ -22,7 +22,11 @@ const SingleSession = ({item, navigation}) => (
           <View style={styles.faveContainer}>
             <Text style={styles.location}>{item.location}</Text>
             {faveIds.includes(item.id) ? (
-              <Icon name="ios-heart" size={12} color="#cf392a" />
+              <Icon
+                name={Platform.OS === 'ios' ? 'ios-heart' : 'md-heart'}
+                size={16}
+                color="#cf392a"
+              />
             ) : null}
           </View>
         </TouchableOpacity>

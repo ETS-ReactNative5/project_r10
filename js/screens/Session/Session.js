@@ -1,7 +1,12 @@
-//stateless markup only
-
 import React from 'react';
-import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  Platform,
+} from 'react-native';
 import styles from './styles';
 import {withNavigation} from 'react-navigation';
 import {FavesContext} from '../../context/FavesContext';
@@ -23,7 +28,11 @@ const Session = ({session, navigation}) => {
           <View style={styles.faveContainer}>
             <Text style={styles.location}>{session.location}</Text>
             {faveIds.includes(session.id) ? (
-              <Icon name="ios-heart" size={15} color="#cf392a" />
+              <Icon
+                name={Platform.OS === 'ios' ? 'ios-heart' : 'md-heart'}
+                size={16}
+                color="#cf392a"
+              />
             ) : null}
           </View>
           <Text style={styles.title}>{session.title}</Text>

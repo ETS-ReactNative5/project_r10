@@ -9,7 +9,17 @@ const Faves = ({allFavedSessions}) => {
     const sortedSessions = formatSessionData(allFavedSessions);
     return <SessionList sessions={sortedSessions} />;
   } else {
-    return <Text>No Faved Session</Text>;
+    return (
+      <Text
+        style={{
+          flexDirection: 'row',
+          textAlign: 'center',
+          justifyContent: 'center',
+          fontSize: 25,
+        }}>
+        No Faved Session
+      </Text>
+    );
   }
 };
 Faves.protoTypes = {
