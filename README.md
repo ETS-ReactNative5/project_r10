@@ -18,7 +18,7 @@ react-native run-ios
 
 ## Android
 
-need Android semulator
+need Android simulator
 
 ```
 react-native run-android
@@ -40,19 +40,21 @@ Google-map: add API Key to android/app/src/main/androidManifest.xml
 
 # ScreenShot
 
-## IOS
+## IOS and Android
 
-![About Page](_snapshots/about.png)
-
-![Faves Page](_snapshots/faves.png)
+![Navbar Page](_snapshots/navbar.png)
 
 ![Schedule  Page](_snapshots/schedule.png)
+
+![Maps  Page](_snapshots/maps.png)
+
+![Faves Page](_snapshots/faves.png)
 
 ![Session Page](_snapshots/session.png)
 
 ![Speaker Page](_snapshots/speaker.png)
 
-## Android
+![About Page](_snapshots/about.png)
 
 # Personal Learnings
 
