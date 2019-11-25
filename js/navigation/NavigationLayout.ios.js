@@ -101,6 +101,9 @@ export default createBottomTabNavigator(
         fontSize: 10,
         fontFamily: typography.fontMain,
       },
+      style: {
+        backgroundColor: 'black',
+      },
     },
   },
 );
