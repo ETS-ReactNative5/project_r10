@@ -8,7 +8,6 @@ import client from './config/api';
 import FavesProvider from './context/FavesContext';
 import SplashScreen from 'react-native-splash-screen';
 
-// const App = () => {
 export default class App extends React.Component {
   componentDidMount() {
     SplashScreen.hide();
@@ -23,5 +22,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-// export default App;
