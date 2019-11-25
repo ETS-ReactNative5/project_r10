@@ -46,7 +46,7 @@ class SessionContainer extends Component {
         {({loading, error, data}) => {
           if (loading) return <Loader />;
           if (error) return <Text>Error ...</Text>;
-          console.log(data.Session);
+          // console.log(data.Session);
           if (data) return <Session session={data.Session} />;
         }}
       </Query>

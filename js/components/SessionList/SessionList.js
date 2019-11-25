@@ -3,6 +3,7 @@ import {View, Text, SectionList} from 'react-native';
 import styles from './styles';
 import moment from 'moment';
 import SingleSession from '../SingleSession';
+import PropTypes from 'prop-types';
 
 const SessionsList = ({sessions}) => (
   <SectionList
@@ -17,5 +18,11 @@ const SessionsList = ({sessions}) => (
     ItemSeparatorComponent={() => <View style={styles.itemSeperator} />}
   />
 );
+
+SessionsList.protoTypes = {
+  session: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+  }),
+};
 
 export default SessionsList;

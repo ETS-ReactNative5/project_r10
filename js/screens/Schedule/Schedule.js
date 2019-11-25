@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, Button, View} from 'react-native';
 import {formatSessionData} from '../../lib/helper';
 import SessionsList from '../../components/SessionList';
+import PropTypes from 'prop-types';
 
 const Schedule = ({navigation, allSessions}) => {
   const sortedSessions = formatSessionData(allSessions);
@@ -12,4 +13,7 @@ const Schedule = ({navigation, allSessions}) => {
   );
 };
 
+Schedule.protoTypes = {
+  allSessions: PropTypes.Object,
+};
 export default Schedule;

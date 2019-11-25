@@ -6,8 +6,16 @@ import {
   LayoutAnimation,
   Animated,
   Easing,
+  Platform,
+  UIManager,
 } from 'react-native';
 import styles from './styles';
+import PropTypes from 'prop-types';
+
+if (Platform.OS === 'android') {
+  UIManager.setLayoutAnimationEnabledExperimental &&
+    UIManager.setLayoutAnimationEnabledExperimental(true);
+}
 
 export default class CodeOfConducts extends Component {
   constructor(props) {
@@ -65,3 +73,10 @@ export default class CodeOfConducts extends Component {
     );
   }
 }
+
+CodeOfConducts.protoTypes = {
+  conduct: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }),
+};

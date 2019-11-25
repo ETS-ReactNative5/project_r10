@@ -4,6 +4,7 @@ import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
 
 import styles from './styles';
 import CodeOfConducts from '../../components/CodeOfConducts';
+import PropTypes from 'prop-types';
 
 const About = ({allConducts}) => (
   <ScrollView style={styles.container}>
@@ -30,5 +31,9 @@ const About = ({allConducts}) => (
     <Text style={styles.copyRight}>&copy; RED Academy 2019</Text>
   </ScrollView>
 );
+
+About.protoTypes = {
+  allConducts: PropTypes.object.isRequired,
+};
 
 export default About;
