@@ -62,3 +62,4 @@ Google-map: add API Key to android/app/src/main/androidManifest.xml
 - Learned how to use Layout Animation and other Animation techniques
 - Learned how to push and pop scenes in the stack
 - Learned how to conditionally render components based on platform used
+- Learned how to integrate Google maps in ios and android.

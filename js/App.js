@@ -6,14 +6,22 @@ import SafeAreaView from 'react-native-safe-area-view';
 import {ApolloProvider} from 'react-apollo';
 import client from './config/api';
 import FavesProvider from './context/FavesContext';
-const App = () => {
-  return (
-    <ApolloProvider client={client}>
-      <FavesProvider>
-        <RootStackNavigator />
-      </FavesProvider>
-    </ApolloProvider>
-  );
-};
+import SplashScreen from 'react-native-splash-screen';
 
-export default App;
+// const App = () => {
+export default class App extends React.Component {
+  componentDidMount() {
+    SplashScreen.hide();
+  }
+  render() {
+    return (
+      <ApolloProvider client={client}>
+        <FavesProvider>
+          <RootStackNavigator />
+        </FavesProvider>
+      </ApolloProvider>
+    );
+  }
+}
+
+// export default App;
