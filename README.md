@@ -42,6 +42,16 @@ Google-map: add API Key to android/app/src/main/androidManifest.xml
 
 ## IOS
 
+![About Page](_snapshots/about.png)
+
+![Faves Page](_snapshots/faves.png)
+
+![Schedule  Page](_snapshots/schedule.png)
+
+![Session Page](_snapshots/session.png)
+
+![Speaker Page](_snapshots/speaker.png)
+
 ## Android
 
 # Personal Learnings
