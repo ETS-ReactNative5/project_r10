@@ -8,7 +8,7 @@ import ScheduleScreen from '../screens/Schedule';
 import SessionScreen from '../screens/Session';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {colors, typography} from '../config/styles';
-import {grey} from 'ansi-colors';
+
 import {sharedNavigationOptions} from './config';
 
 const {black, mediumGrey, white} = colors;
@@ -90,10 +90,10 @@ AboutStack.navigationOptions = {
 // Dedicated stacks for Schedule, Map and Faves will go here too!
 export default createDrawerNavigator(
   {
-    About: AboutStack,
-    Faves: FavesStack,
-    Maps: MapStack,
     Schedule: ScheduleStack,
+    Maps: MapStack,
+    Faves: FavesStack,
+    About: AboutStack,
   },
   {
     tabBarOptions: {

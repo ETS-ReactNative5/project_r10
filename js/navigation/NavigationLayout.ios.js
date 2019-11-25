@@ -69,10 +69,10 @@ const ScheduleStack = createStackNavigator(
 // Dedicated stacks for Schedule, Map and Faves will go here too!
 export default createBottomTabNavigator(
   {
-    About: AboutStack,
-    Faves: FavesStack,
-    Maps: MapStack,
     Schedule: ScheduleStack,
+    Maps: MapStack,
+    Faves: FavesStack,
+    About: AboutStack,
   },
   {
     defaultNavigationOptions: ({navigation}) => ({

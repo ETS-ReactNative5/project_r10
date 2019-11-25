@@ -1,5 +1,5 @@
 import React from 'react';
-// import {SafeAreaView} from 'react-native';
+
 import AboutScreen from './screens/About';
 import RootStackNavigator from './navigation/RootStackNavigator';
 import SafeAreaView from 'react-native-safe-area-view';
