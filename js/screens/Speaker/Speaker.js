@@ -60,6 +60,9 @@ Speaker.protoTypes = {
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     bio: PropTypes.string.isRequired,
+    session: PropTypes.object,
+    url: PropTypes.string,
+    id: PropTypes.string,
   }),
   navigation: PropTypes.object.isRequired,
 };

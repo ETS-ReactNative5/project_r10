@@ -99,6 +99,9 @@ Session.protoTypes = {
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
+    speaker: PropTypes.object,
+    startTime: PropTypes.string,
+    description: PropTypes.string,
   }),
   navigation: PropTypes.object.isRequired,
 };

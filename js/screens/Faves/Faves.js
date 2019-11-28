@@ -15,6 +15,7 @@ const Faves = ({allFavedSessions}) => {
           flexDirection: 'row',
           textAlign: 'center',
           justifyContent: 'center',
+          alignContent: 'center',
           fontSize: 25,
         }}>
         No Faved Session
